@@ -1,8 +1,10 @@
+import "./SearchBar.css";
+
 const SearchBar: React.FC = () => {
   return (
-    <header>
+    <section className="search-bar">
       <input type="text" />
-    </header>
+    </section>
   );
 };
 

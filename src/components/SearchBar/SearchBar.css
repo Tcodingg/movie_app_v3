@@ -1,0 +1,20 @@
+.search-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  width: 100%;
+  position: relative;
+}
+
+.search-bar input {
+  /* max-width: 1200px; */
+  color: black;
+  outline: none;
+  border: none;
+  height: 30px;
+  width: 80%;
+  font-size: 16px;
+  padding-left: 15px;
+  border-radius: 20px;
+}
