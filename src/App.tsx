@@ -1,9 +1,18 @@
 import React from "react";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import SearchBar from "./components/SearchBar/SearchBar";
+
+import Home from "./components/Home/Home";
 
 const App: React.FC = () => {
   return (
     <div>
-      <h1>app is working</h1>
+      <BrowserRouter>
+        <SearchBar />
+        <Switch>
+          <Route exact path="/" component={Home} />
+        </Switch>
+      </BrowserRouter>
     </div>
   );
 };
