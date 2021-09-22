@@ -2,9 +2,11 @@ import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchMovies } from "../../redux/Home/action";
 import { RootState } from "../../redux/rootReducer";
+import { Reusable } from "../../tools/Reusable";
 
 const Home: React.FC = () => {
   const dispatch = useDispatch();
+
   const state = useSelector((state: RootState) => state.homeReducer.movies);
   useEffect(() => {
     dispatch(fetchMovies());
@@ -14,10 +16,7 @@ const Home: React.FC = () => {
 
   return (
     <div>
-      {state.topRated.map((movie) => {
-        return <h1 key={movie.id.toString()}>{movie.id}</h1>;
-      })}
-      <h1>Home </h1>
+      <Reusable movies={state.topRated} title="Top Rated" />
     </div>
   );
 };
