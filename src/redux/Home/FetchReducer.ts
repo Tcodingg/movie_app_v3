@@ -2,25 +2,30 @@ import { Actions, actionTypes, movieData } from "./actionTypes";
 
 interface interfaceState {
   loading: boolean;
-  movies: movieData[];
+  movies: {
+    topRated: movieData[];
+    popular: movieData[];
+    nowPlaying: movieData[];
+  };
   err?: string;
 }
 
 let initialState: interfaceState = {
   loading: false,
-  movies: [],
+  movies: {
+    topRated: [],
+    popular: [],
+    nowPlaying: [],
+  },
 };
 
-export const FetchReducer = (
+export const homeReducer = (
   state: interfaceState = initialState,
   action: Actions
 ) => {
   switch (action.type) {
     case actionTypes.FETCH_MOVIE_LOADING:
-      return {
-        loading: true,
-        movies: [],
-      };
+      return { ...state, loading: true };
     case actionTypes.FETCH_MOVIE_SUCCESS:
       return {
         loading: false,
@@ -28,9 +33,13 @@ export const FetchReducer = (
       };
     case actionTypes.FETCH_MOVIE_FAIL:
       return {
+        ...state,
         loading: false,
-        movies: [],
+
         err: action.payload,
       };
+
+    default:
+      return state;
   }
 };

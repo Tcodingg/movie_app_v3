@@ -10,7 +10,11 @@ type actionLoad = {
 
 type actionSuccess = {
   type: actionTypes.FETCH_MOVIE_SUCCESS;
-  payload: movieData[];
+  payload: {
+    topRated: movieData[];
+    popular: movieData[];
+    nowPlaying: movieData[];
+  };
 };
 
 type actionFailure = {
