@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchMovies } from "../../redux/Home/action";
 import { RootState } from "../../redux/rootReducer";
+
 import { Reusable } from "../../tools/Reusable";
 
 const Home: React.FC = () => {

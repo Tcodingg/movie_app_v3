@@ -10,3 +10,10 @@ body {
   color: white;
   font-family: "Poppins", sans-serif;
 }
+
+.scroll-container {
+  display: inline-flex;
+  width: 100%;
+  margin: 0 auto;
+  overflow-x: scroll;
+}

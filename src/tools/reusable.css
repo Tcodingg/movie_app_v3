@@ -1,3 +1,4 @@
+/* Hide scrollbar from all browsers starts */
 /* Hide scrollbar from chrome */
 .poster-wrapper::-webkit-scrollbar {
   display: none;
@@ -8,12 +9,7 @@
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
-.poster-wrapper {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  overflow-x: scroll;
-}
+/* Hide scrollbar from all browsers ends*/
 
 .poster-wrapper img {
   width: 200px;
@@ -30,4 +26,12 @@
 
 .category {
   margin-left: 10px;
+}
+
+/* scroll-container is working only through index.css*/
+.scroll-container {
+  display: inline-flex;
+  width: 100%;
+  margin: 0 auto;
+  overflow-x: scroll;
 }
