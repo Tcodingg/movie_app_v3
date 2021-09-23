@@ -1,3 +1,13 @@
+/* Hide scrollbar from chrome */
+.poster-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.poster-wrapper {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
 .poster-wrapper {
   display: flex;
   flex-direction: row;
@@ -16,4 +26,8 @@
 }
 .poster-wrapper img:hover {
   transform: scale(1.05);
+}
+
+.category {
+  margin-left: 10px;
 }

@@ -3,13 +3,14 @@ import "./reusable.css";
 import { Link } from "react-router-dom";
 interface props {
   movies: movieData[];
-  title: string;
+  category: string;
 }
 const images = "https://image.tmdb.org/t/p/w500";
 
-export const Reusable: React.FC<props> = ({ movies, title }) => {
+export const Reusable: React.FC<props> = ({ movies, category }) => {
   return (
     <div className="poster-container">
+      <h1 className="category">{category}</h1>
       <div className="poster-wrapper">
         {movies.map((movie) => {
           return (

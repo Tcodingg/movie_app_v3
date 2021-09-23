@@ -16,7 +16,7 @@ const Home: React.FC = () => {
 
   return (
     <div>
-      <Reusable movies={state.topRated} title="Top Rated" />
+      <Reusable movies={state.topRated} category="Top Rating" />
     </div>
   );
 };
