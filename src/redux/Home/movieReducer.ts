@@ -19,7 +19,7 @@ let initialState: interfaceState = {
   },
 };
 
-export const homeReducer = (
+export const movieReducer = (
   state: interfaceState = initialState,
   action: Actions
 ) => {

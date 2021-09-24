@@ -10,7 +10,7 @@ import { Reusable } from "../../tools/Reusable";
 const Home: React.FC = () => {
   const dispatch = useDispatch();
 
-  const state = useSelector((state: RootState) => state.homeReducer.movies);
+  const state = useSelector((state: RootState) => state.movieReducer.movies);
   useEffect(() => {
     dispatch(fetchMovies());
   }, [dispatch]);

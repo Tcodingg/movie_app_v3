@@ -1,7 +1,7 @@
 import { combineReducers } from "redux";
-import { homeReducer } from "./Home/FetchReducer";
+import { movieReducer } from "./Home/movieReducer";
 
 export const rootReducer = combineReducers({
-  homeReducer,
+  movieReducer,
 });
 export type RootState = ReturnType<typeof rootReducer>;

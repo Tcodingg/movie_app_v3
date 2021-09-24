@@ -20,7 +20,7 @@ const Details: React.FC = () => {
       }
     };
     getTrailers();
-    console.log(trailer);
+    // console.log(trailer);
   }, [trailer, youtube_video]);
 
   return <div></div>;
