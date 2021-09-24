@@ -35,3 +35,7 @@
   margin: 0 auto;
   overflow-x: scroll;
 }
+
+.poster-container {
+  margin: 50px 0px 10px;
+}

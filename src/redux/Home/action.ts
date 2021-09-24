@@ -11,9 +11,24 @@ export const fetchMovies = () => async (dispatch: Dispatch) => {
         api_key: API_KEY,
       },
     });
+
+    const popular = await axios.get(popularUrl, {
+      params: {
+        api_key: API_KEY,
+      },
+    });
+    const nowPlaying = await axios.get(nowPlayingUrl, {
+      params: {
+        api_key: API_KEY,
+      },
+    });
     dispatch({
       type: actionTypes.FETCH_MOVIE_SUCCESS,
-      payload: { topRated: topRated.data.results },
+      payload: {
+        topRated: topRated.data.results,
+        popular: popular.data.results,
+        nowPlaying: nowPlaying.data.results,
+      },
     });
     // console.log(topRated);
   } catch (err) {

@@ -1,7 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchMovies } from "../../redux/Home/action";
 import { RootState } from "../../redux/rootReducer";
+import tv from "../../images/tv.png";
+import "./home.css";
 
 import { Reusable } from "../../tools/Reusable";
 
@@ -11,14 +13,28 @@ const Home: React.FC = () => {
   const state = useSelector((state: RootState) => state.homeReducer.movies);
   useEffect(() => {
     dispatch(fetchMovies());
-  }, []);
-
-  console.log(state);
+  }, [dispatch]);
 
   return (
-    <div>
-      <Reusable movies={state.topRated} category="Top Rating" />
-    </div>
+    <section className="home">
+      <div className="home-banner">
+        <div className="home-banner-wrapper">
+          <div className="home-details">
+            <h1>Enjoy Your TV.</h1>
+            <p>
+              Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV,
+              Blu-ray players, and more.
+            </p>
+          </div>
+          <img src={tv} alt="" />
+        </div>
+      </div>
+      <div className="movies">
+        <Reusable movies={state.nowPlaying} category="NOW PLAYING" />
+        <Reusable movies={state.topRated} category="TOP RATING" />
+        <Reusable movies={state.popular} category="POPULAR" />
+      </div>
+    </section>
   );
 };
 

@@ -20,7 +20,11 @@ export const Reusable: React.FC<props> = ({ movies, category }) => {
         >
           {movies.map((movie) => {
             return (
-              <Link to="/" className="poster" key={movie.id.toString()}>
+              <Link
+                to={`/details/${movie.id}`}
+                className="poster"
+                key={movie.id.toString()}
+              >
                 <img src={`${images}${movie.poster_path}`} alt="poster" />
               </Link>
             );
