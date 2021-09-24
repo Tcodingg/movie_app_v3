@@ -5,19 +5,23 @@ import axios from "axios";
 
 const Details: React.FC = () => {
   const params: { id: string } = useParams();
-  const youtube_video = `${youtube_videos}${params.id}?api_key=${API_KEY}`;
+  const youtube_video = `${youtube_videos}${params.id}/videos?api_key=${API_KEY}`;
+  const [trailer, setTrailer] = useState<string>("");
 
   useEffect(() => {
     const getTrailers = async () => {
       try {
-        const youtube_trailer = await axios.get(youtube_video);
-        console.log(youtube_trailer.data);
+        const {
+          data: { results },
+        } = await axios.get(youtube_video);
+        setTrailer(`${youtube_link}${results[0].key}`);
       } catch (err) {
         console.log(err);
       }
     };
     getTrailers();
-  }, [youtube_video]);
+    console.log(trailer);
+  }, [trailer, youtube_video]);
 
   return <div></div>;
 };
