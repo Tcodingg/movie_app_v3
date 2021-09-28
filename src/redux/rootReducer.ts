@@ -1,5 +1,5 @@
 import { combineReducers } from "redux";
-import { movieReducer } from "./Home/movieReducer";
+import { movieReducer } from "./fetchMovie/movieReducer";
 
 export const rootReducer = combineReducers({
   movieReducer,

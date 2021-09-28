@@ -1,7 +1,12 @@
 import axios from "axios";
 import { Dispatch } from "redux";
 import { actionTypes } from "./actionTypes";
-import { topRatedUrl, popularUrl, nowPlayingUrl, API_KEY } from "../url";
+import {
+  topRatedUrl,
+  popularUrl,
+  nowPlayingUrl,
+  API_KEY,
+} from "../../tools/url";
 
 export const fetchMovies = () => async (dispatch: Dispatch) => {
   dispatch({ type: actionTypes.FETCH_MOVIE_LOADING });

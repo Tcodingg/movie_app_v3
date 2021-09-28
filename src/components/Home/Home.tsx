@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchMovies } from "../../redux/Home/action";
+import { fetchMovies } from "../../redux/fetchMovie/action";
 import { RootState } from "../../redux/rootReducer";
 import tv from "../../images/tv.png";
 import "./home.css";

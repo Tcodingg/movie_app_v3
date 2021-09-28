@@ -5,3 +5,4 @@ export const nowPlayingUrl: string =
 export const API_KEY = process.env.REACT_APP_MOVIE_API_KEY;
 export const youtube_videos = process.env.REACT_APP_YOUTUBE_VIDEOS;
 export const youtube_link = process.env.REACT_APP_YOUTUBE_LINK;
+export const recommendedUrl = process.env.REACT_APP_RECOMMENDED_URL;

@@ -1,4 +1,4 @@
-import { movieData } from "../redux/Home/actionTypes";
+import { movieData } from "../redux/fetchMovie/actionTypes";
 import "./reusable.css";
 import { Link } from "react-router-dom";
 import ScrollContainer from "react-indiana-drag-scroll";
