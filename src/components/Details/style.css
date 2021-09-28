@@ -1,0 +1,11 @@
+.details {
+  /* background-color: red; */
+  margin: auto;
+  max-width: var(--max-width);
+}
+
+.youtube-and-description {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}

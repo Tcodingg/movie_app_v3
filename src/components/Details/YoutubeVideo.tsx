@@ -16,16 +16,15 @@ const YoutubeVideo: React.FC<props> = ({ id }) => {
         const {
           data: { results },
         } = await axios.get(youtube_video);
-        // setTrailer(`${youtube_link}${results[0].key}`);
+
         setTrailer(results[0].key);
       } catch (err) {
         console.log(err);
       }
     };
+    console.log(trailer);
     getTrailers();
-    // console.log(trailer);
   }, [trailer, youtube_video]);
-  //   console.log(id);
   return (
     <div>
       <YouTube opts={opts} videoId={trailer} />
