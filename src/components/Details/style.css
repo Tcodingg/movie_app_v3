@@ -1,11 +1,72 @@
+/* ===== Details======= */
 .details {
   /* background-color: red; */
   margin: auto;
   max-width: var(--max-width);
 }
 
+/* ===== Description starts====== */
+
+.genres {
+  margin-top: 20px;
+}
+
+.description .genres {
+  display: flex;
+  gap: 10px;
+  align-items: flex-end;
+}
+
+.description div {
+  display: flex;
+  gap: 10px;
+}
 .youtube-and-description {
   display: grid;
   grid-template-columns: 1fr 1fr;
+
   gap: 30px;
 }
+
+.rating-container {
+  display: flex;
+  gap: 10px;
+  align-items: flex-end;
+}
+/* ===== Description ends====== */
+
+/* ============ Recommended starts============= */
+.recommended {
+  margin-top: 50px;
+}
+
+.recommended h1 {
+  margin-bottom: 20px;
+}
+
+.recommended div {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+}
+.recommended a {
+  margin: auto;
+
+  height: 280px;
+  width: fit-content;
+}
+.recommended a:nth-last-child(1) {
+}
+.recommended img {
+  /* margin: 10px; */
+  height: 280px;
+  width: 190px;
+  transition: all 0.35s ease-in-out;
+  border-radius: 5px;
+}
+
+.recommended img:hover {
+  transform: scale(1.06);
+}
+
+/* ============ Recommended ends============= */

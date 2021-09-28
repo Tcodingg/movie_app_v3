@@ -9,6 +9,11 @@
   --max-width: 1200px;
 }
 
+.section {
+  max-width: var(--max-width);
+  padding: 50px;
+  margin: 0 auto;
+}
 body {
   background-color: black;
   color: white;

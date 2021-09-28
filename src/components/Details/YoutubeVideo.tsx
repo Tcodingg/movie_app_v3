@@ -22,7 +22,7 @@ const YoutubeVideo: React.FC<props> = ({ id }) => {
         console.log(err);
       }
     };
-    console.log(trailer);
+
     getTrailers();
   }, [trailer, youtube_video]);
   return (

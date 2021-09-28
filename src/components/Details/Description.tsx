@@ -12,9 +12,6 @@ const Description: React.FC<props> = ({ id }) => {
     genres: [],
     vote_average: null,
   });
-  // title
-  // about movie
-  // rating
 
   useEffect(() => {
     const getDescription = async () => {
@@ -29,24 +26,26 @@ const Description: React.FC<props> = ({ id }) => {
         genres,
         vote_average,
       });
-      console.log(genres);
     };
     getDescription();
-  }, []);
+  }, [id]);
 
   return (
-    <div>
+    <div className="description">
       <h1>{description.title}</h1>
       <p>{description.overview}</p>
-      <div>
-        <h3>Genres</h3>
+      <div className="genres">
+        <h3>Genres:</h3>
         <div>
           {description.genres.map((i: { name: string }) => (
             <p>{i.name}</p>
           ))}
         </div>
       </div>
-      <p>{Number(description.vote_average).toFixed(2)}</p>
+      <div className="rating-container">
+        <h3> Rating: </h3>
+        <p> {Number(description.vote_average).toFixed(2)} </p>
+      </div>
     </div>
   );
 };

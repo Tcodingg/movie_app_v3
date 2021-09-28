@@ -13,7 +13,7 @@ const SearchBar: React.FC = () => {
     }
   };
   return (
-    <section className="search-bar">
+    <section className="search-bar section">
       <input
         onChange={handleChange}
         type="text"

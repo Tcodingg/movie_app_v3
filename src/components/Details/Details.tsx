@@ -10,13 +10,13 @@ const Details: React.FC = () => {
   const params: { id: string } = useParams();
 
   return (
-    <div className="details">
+    <section className="section details">
       <div className="youtube-and-description">
         <YoutubeVideo id={params.id} />
         <Description id={params.id} />
       </div>
       <Recommended id={params.id} />
-    </div>
+    </section>
   );
 };
 
