@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { API_KEY, recommendedUrl, poster_url } from "../../tools/url";
 import { Link } from "react-router-dom";
-
 interface props {
   id: string;
 }

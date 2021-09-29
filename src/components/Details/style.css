@@ -1,4 +1,4 @@
-/* ===== Details======= */
+d/* ===== Details======= */
 .details {
   /* background-color: red; */
   margin: auto;
@@ -51,22 +51,20 @@
 }
 .recommended a {
   margin: auto;
-
   height: 280px;
   width: fit-content;
+  margin-bottom: 30px;
 }
-.recommended a:nth-last-child(1) {
-}
+
 .recommended img {
-  /* margin: 10px; */
-  height: 280px;
-  width: 190px;
+  height: 290px;
+  width: 200px;
   transition: all 0.35s ease-in-out;
   border-radius: 5px;
 }
 
 .recommended img:hover {
-  transform: scale(1.06);
+  transform: scale(1.04);
 }
 
 /* ============ Recommended ends============= */

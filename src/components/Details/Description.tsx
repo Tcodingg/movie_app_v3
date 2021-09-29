@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { API_KEY, movieDataUrl } from "../../tools/url";
+import { API_KEY } from "../../tools/url";
 
 interface props {
   id: string;
@@ -37,14 +37,14 @@ const Description: React.FC<props> = ({ id }) => {
       <div className="genres">
         <h3>Genres:</h3>
         <div>
-          {description.genres.map((i: { name: string }) => (
-            <p>{i.name}</p>
+          {description.genres.map((i: { name: string }, index) => (
+            <p key={index}>{i.name}</p>
           ))}
         </div>
       </div>
       <div className="rating-container">
         <h3> Rating: </h3>
-        <p> {Number(description.vote_average).toFixed(2)} </p>
+        <p> {Number(description.vote_average).toFixed(1)} </p>
       </div>
     </div>
   );

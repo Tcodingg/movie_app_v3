@@ -4,7 +4,6 @@ import { fetchMovies } from "../../redux/fetchMovie/action";
 import { RootState } from "../../redux/rootReducer";
 import tv from "../../images/tv.png";
 import "./home.css";
-
 import { Reusable } from "../../tools/Reusable";
 
 const Home: React.FC = () => {

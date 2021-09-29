@@ -8,3 +8,4 @@ export const youtube_link = process.env.REACT_APP_YOUTUBE_LINK;
 export const recommendedUrl = process.env.REACT_APP_RECOMMENDED_URL;
 export const movieDataUrl = process.env.REACT_APP_MOVIE_DATA_URL;
 export const poster_url = process.env.REACT_APP_POSTERS;
+export const search_movie_url = process.env.REACT_APP_SEARCH_MOVIES;

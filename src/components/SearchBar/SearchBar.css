@@ -18,3 +18,33 @@
   padding-left: 15px;
   border-radius: 20px;
 }
+
+/* ================results */
+.results {
+  padding-top: 0;
+  margin-top: 0;
+}
+.results {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+}
+.results-poster a {
+  height: 280px;
+  width: fit-content;
+  margin-bottom: 30px;
+}
+.results h1,
+.results p {
+  width: 200px;
+}
+
+.results-poster img {
+  height: 290px;
+  width: 200px;
+  transition: all 0.35s ease-in-out;
+  border-radius: 5px;
+}
+.results-poster img:hover {
+  transform: scale(1.04);
+}
