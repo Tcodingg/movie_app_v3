@@ -16,7 +16,6 @@
 .home-banner-wrapper p {
   font-size: 20px;
   text-align: center;
-  padding: 0 60px;
 }
 .home-banner-wrapper img {
   width: 100%;
@@ -27,7 +26,9 @@
   border-bottom: 8px solid #222;
   border-top: 8px solid #222;
 }
-
+.home-details {
+  max-width: 500px;
+}
 /* ================== Media queries =================== */
 @media only screen and (max-width: 1200px) {
   .home-banner-wrapper h1 {

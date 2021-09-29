@@ -27,6 +27,7 @@ const YoutubeVideo: React.FC<props> = ({ id }) => {
   return (
     <div className="youtube-video">
       <iframe
+        title="youtube"
         width="853"
         height="480"
         src={`${youtube_url}/${trailer}`}

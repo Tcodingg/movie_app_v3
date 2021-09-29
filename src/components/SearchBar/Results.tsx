@@ -30,9 +30,13 @@ const Results: React.FC = () => {
 
   return (
     <section className="results section">
-      {results.map((movie: any) => {
+      {results.map((movie: any, index) => {
         return (
-          <Link className="results-poster" to={`/details/${movie.id}`}>
+          <Link
+            key={index}
+            className="results-poster"
+            to={`/details/${movie.id}`}
+          >
             <img src={`${poster_url}${movie.poster_path}`} alt="" />
           </Link>
         );
