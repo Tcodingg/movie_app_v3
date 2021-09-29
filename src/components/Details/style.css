@@ -21,6 +21,21 @@ d/* ===== Details======= */
   display: flex;
   gap: 10px;
 }
+
+.youtube-video {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+}
+
+.youtube-video iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
 .youtube-and-description {
   display: grid;
   grid-template-columns: 1fr 1fr;

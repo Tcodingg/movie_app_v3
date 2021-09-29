@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import YouTube from "react-youtube";
-import { youtube_videos, API_KEY, youtube_link } from "../../tools/url";
+import { youtube_videos, API_KEY, youtube_url } from "../../tools/url";
 
 interface props {
   id: string;
@@ -26,14 +25,15 @@ const YoutubeVideo: React.FC<props> = ({ id }) => {
     getTrailers();
   }, [trailer, youtube_video]);
   return (
-    <div>
-      <YouTube opts={opts} videoId={trailer} />
+    <div className="youtube-video">
+      <iframe
+        width="853"
+        height="480"
+        src={`${youtube_url}/${trailer}`}
+        frameBorder="0"
+      />
     </div>
   );
 };
 
-const opts = {
-  width: "500px",
-  height: "300px",
-};
 export default YoutubeVideo;
