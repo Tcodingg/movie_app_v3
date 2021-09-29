@@ -28,7 +28,6 @@ const Results: React.FC = () => {
     getResults();
   }, [query]);
 
-  console.log(results);
   return (
     <section className="results section">
       {results.map((movie: any) => {

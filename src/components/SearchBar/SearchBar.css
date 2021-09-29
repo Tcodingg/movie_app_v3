@@ -45,6 +45,7 @@
   margin-left: auto;
   padding-bottom: 5px;
   transition: all 0.35s ease-in-out;
+  width: 100%;
 }
 .results-poster img:hover {
   transform: scale(1.04);

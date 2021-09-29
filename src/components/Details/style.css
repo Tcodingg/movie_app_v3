@@ -49,18 +49,17 @@ d/* ===== Details======= */
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 10px;
 }
-.recommended a {
-  margin: auto;
-  height: 280px;
-  width: fit-content;
-  margin-bottom: 30px;
-}
 
-.recommended img {
-  height: 290px;
-  width: 200px;
-  transition: all 0.35s ease-in-out;
+.recommended img,
+.recommended a {
+  max-width: 200px;
+  height: 100%;
   border-radius: 5px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-bottom: 5px;
+  transition: all 0.35s ease-in-out;
+  width: 100%;
 }
 
 .recommended img:hover {
@@ -68,3 +67,23 @@ d/* ===== Details======= */
 }
 
 /* ============ Recommended ends============= */
+
+@media (max-width: 800px) {
+  .recommended div {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+  .recommended img,
+  .recommended a {
+    max-width: 150px;
+  }
+}
+
+@media (max-width: 414px) {
+  .recommended div {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+  .recommended img,
+  .recommended a {
+    max-width: 100px;
+  }
+}
