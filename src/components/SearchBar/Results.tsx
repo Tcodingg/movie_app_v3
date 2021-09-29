@@ -33,14 +33,9 @@ const Results: React.FC = () => {
     <section className="results section">
       {results.map((movie: any) => {
         return (
-          <div className="results-poster">
-            <Link to={`/details/${movie.id}`}>
-              <img src={`${poster_url}${movie.poster_path}`} alt="" />
-            </Link>
-
-            {/* <h3>{movie.title}</h3>
-            <p>{movie.vote_average}</p> */}
-          </div>
+          <Link className="results-poster" to={`/details/${movie.id}`}>
+            <img src={`${poster_url}${movie.poster_path}`} alt="" />
+          </Link>
         );
       })}
     </section>
