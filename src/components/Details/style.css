@@ -83,7 +83,14 @@ d/* ===== Details======= */
 
 /* ============ Recommended ends============= */
 
+/* ======================Media Queries ================== */
+
 @media (max-width: 800px) {
+  /* =============== youtube video and description==== */
+  .youtube-and-description {
+    grid-template-columns: 1fr;
+  }
+  /* ============= Recommended =================== */
   .recommended div {
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   }
@@ -94,6 +101,7 @@ d/* ===== Details======= */
 }
 
 @media (max-width: 414px) {
+  /* ============= Recommended =================== */
   .recommended div {
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   }
