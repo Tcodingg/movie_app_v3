@@ -25,7 +25,9 @@ const Home: React.FC = () => {
               Blu-ray players, and more.
             </p>
           </div>
-          <img src={tv} alt="" />
+          <div className="img-wrapper">
+            <img src={tv} alt="" />
+          </div>
         </div>
       </div>
       <div className="movies">
