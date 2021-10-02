@@ -6,8 +6,10 @@ import { localStore } from "./redux/store";
 import { BrowserRouter, HashRouter } from "react-router-dom";
 
 ReactDOM.render(
-  <Provider store={localStore}>
-    <App />
-  </Provider>,
+  <HashRouter>
+    <Provider store={localStore}>
+      <App />
+    </Provider>
+  </HashRouter>,
   document.getElementById("root")
 );

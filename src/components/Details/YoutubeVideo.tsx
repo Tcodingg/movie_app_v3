@@ -32,6 +32,7 @@ const YoutubeVideo: React.FC<props> = ({ id }) => {
         height="480"
         src={`${youtube_url}/${trailer}`}
         frameBorder="0"
+        allowFullScreen
       />
     </div>
   );
